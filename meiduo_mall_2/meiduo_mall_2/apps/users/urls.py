@@ -7,4 +7,11 @@ urlpatterns = [
     # 手机号重复注册
     # re_path(r'^/mobiles/(?P<mobile>1[3-9]\d{9})/count/$', MobileCountView.as_view()),
     re_path(r'^mobiles/(?P<mobile>1[3-9]\d{9})/count/$', MobileCountView.as_view()),
+    # 注册
+    re_path(r'^register/$', RegisterView.as_view()),
+    # 登录
+    re_path(r'^login/$', LoginView.as_view()),
+    # 登出
+    re_path(r'^logout/$',LogoutView.as_view()),
+
 ]

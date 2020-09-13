@@ -18,10 +18,10 @@ from django.urls import path,re_path,include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-
     # 总路由的正则为空，表示总路由不会匹配任何路径前缀，把完整的路径交给子路由匹配
     re_path(r'', include('users.urls')),
-
-    # 图形验证码
+    # 验证码
     path('', include('verifications.urls')),
+    # oauth
+    path('', include('oauth.urls')),
 ]
